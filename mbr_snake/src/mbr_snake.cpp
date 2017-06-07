@@ -112,12 +112,14 @@ public:
     }
     
     class frame {
-        public:
-        frame(uint16_t nFrames) {
-            auto initialTicks = getTicks();
-            while (getTicks() - initialTicks < nFrames) {}
+    public:
+        frame(uint16_t nFrames) : m_frames{ nFrames }, m_startTime{ getTicks() } {}
+        ~frame() {
+            while (getTicks() - m_startTime < m_frames) {}
         }
-        ~frame() {}
+    private:
+        uint16_t m_frames;
+        uint16_t m_startTime;
     };
 };
 
