@@ -1,3 +1,8 @@
+# Hey! A revised and fully working version is [available here](https://github.com/adam10603/mbr_snake)! 🤠
+
+
+___________________
+
 # MBR-Snake
 
 An incomplete game of Snake, that fits into a boot sector on x86, written in C++.
